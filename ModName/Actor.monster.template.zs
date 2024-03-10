@@ -1,3 +1,5 @@
+version "4.11.3"
+
 class MONSTER : Actor
 {
     // This is where class-scope variables (aka fields)

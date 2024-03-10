@@ -1,3 +1,5 @@
+version "4.11.3"
+
 class PROJECTILE : Actor
 {
     // This is where class-scope variables (aka fields)

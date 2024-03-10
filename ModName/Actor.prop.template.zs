@@ -1,5 +1,6 @@
+version "4.11.3"
 
-class DECORATION : Actor
+class PROP : Actor
 {
     Default
     {
