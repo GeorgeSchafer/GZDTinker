@@ -1,10 +1,8 @@
 version "4.11.3"
 
-#include "DungeonCrawler/constants.zs"
-#include "DungeonCrawler/player.zs"
-#include "DungeonCrawler/weapons.zs"
-#include "DungeonCrawler/monsters.zs"
-#include "DungeonCrawler/decorations.zs"
+// #include "ModName/constants.zs"
+#include "revolver/actor.weapon.revolver.zs"
+// #include "gzdpistol/actor.weapon.gzdpistol.zs"
 
 
 

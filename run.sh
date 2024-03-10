@@ -1,3 +1,3 @@
 #!/bin/bash
 
-start gzdoom/gzdoom.exe -iwad doom2.wad -file "./ModName"
+start gzdoom/gzdoom.exe -iwad doom2.wad -file "./"
