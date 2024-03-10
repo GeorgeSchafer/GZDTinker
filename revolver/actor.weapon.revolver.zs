@@ -74,7 +74,7 @@ class  Revolver : DoomWeapon
        /* @state Fire
         *       Fire sequence is played when you press Fire while 
         *       A_WeaponReady() was called                                */
-            RVLV B 4;
+            RVLV B 8;
             RVLV C 6 A_FirePistol; // A_FirePistol default Doom pistol attack
             RVLV D 4;
             RVLV E 5 A_ReFire; //loops the sequence if the player was holding down Fire button
