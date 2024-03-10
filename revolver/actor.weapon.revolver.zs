@@ -47,7 +47,7 @@ class  Revolver : DoomWeapon
             /* @state Ready
             *       Ready sequence is the default sequence used when the 
             *       weapon is prepared                                        */
-            RVLV A 1 A_WeaponReady;
+            RVLV A 4 A_WeaponReady;
                 /* @param A_WeaponReady { method }
                 *       makes the weapon ready for firing (will react to 
                 *       pressing Fire button)                                 */
