@@ -8,7 +8,7 @@ class  Revolver : DoomWeapon
        /* @param Weapon.SelectionOrder { int }
         *       defines the priority of selecting this weapons when others
         *       run out of ammo                                           */
-        Weapon.SelectionOrder 1899;
+        Weapon.SelectionOrder 1901;
 
        /* @param Weapon.AmmoUse { int }
         *       how much ammo it uses per shot                            */
@@ -44,13 +44,13 @@ class  Revolver : DoomWeapon
     States
     {
         Ready:
-       /* @state Ready
-        *       Ready sequence is the default sequence used when the 
-        *       weapon is prepared                                        */
-            RVLV A 4 A_WeaponReady;
-           /* @param A_WeaponReady { method }
-            *       makes the weapon ready for firing (will react to 
-            *       pressing Fire button)                                 */
+            /* @state Ready
+            *       Ready sequence is the default sequence used when the 
+            *       weapon is prepared                                        */
+            RVLV A 1 A_WeaponReady;
+                /* @param A_WeaponReady { method }
+                *       makes the weapon ready for firing (will react to 
+                *       pressing Fire button)                                 */
             Loop;
         Deselect:
        /* @state Deselect
@@ -74,17 +74,17 @@ class  Revolver : DoomWeapon
        /* @state Fire
         *       Fire sequence is played when you press Fire while 
         *       A_WeaponReady() was called                                */
-            // RVLV B 4;
-            RVLV C 4 A_FirePistol; // A_FirePistol default Doom pistol attack
-            // RVLV D 4;
-            RVLV E 4 A_ReFire; //loops the sequence if the player was holding down Fire button
+            RVLV B 4;
+            RVLV C 6 A_FirePistol; // A_FirePistol default Doom pistol attack
+            RVLV D 4;
+            RVLV E 5 A_ReFire; //loops the sequence if the player was holding down Fire button
             Goto Ready; //otherwise goes back to ready
 
         Flash:
        /* @state Flash
         *       Flash sequence draws a muzzle flash on a separate layer, 
         *       on top of the main weapon sprite                          */
-            RVLV BCDE 7 Bright A_Light1; //illuminates the whole level
+            RVLV C 7 Bright A_Light1; //illuminates the whole level
             Goto LightDone;
 
         Spawn:
