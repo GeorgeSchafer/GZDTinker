@@ -47,7 +47,7 @@ class  Revolver : DoomWeapon
             /* @state Ready
             *       Ready sequence is the default sequence used when the 
             *       weapon is prepared                                        */
-            RVLV A 4 A_WeaponReady;
+            RVLV A 1 A_WeaponReady;
                 /* @param A_WeaponReady { method }
                 *       makes the weapon ready for firing (will react to 
                 *       pressing Fire button)                                 */
@@ -56,7 +56,7 @@ class  Revolver : DoomWeapon
        /* @state Deselect
         *       Deselect sequence is played when you're switching to 
         *       another weapon                                            */
-            RVLV A 4 A_Lower;
+            RVLV A 2 A_Lower;
            /* @param A_Lower { method }
             *       lowers the weapon on the screen until it disappears, 
             *       then selects another weapon                           */
@@ -66,7 +66,7 @@ class  Revolver : DoomWeapon
        /* @state Select
         *       Select sequence is played when you've switched to this 
         *       weapon                                                    */
-            RVLV A 4 A_Raise; //raises the weapon from below the screen, then goes to Ready
+            RVLV A 2 A_Raise; //raises the weapon from below the screen, then goes to Ready
             Loop;
 
 
@@ -74,17 +74,17 @@ class  Revolver : DoomWeapon
        /* @state Fire
         *       Fire sequence is played when you press Fire while 
         *       A_WeaponReady() was called                                */
-            RVLV B 8;
-            RVLV C 6 A_FirePistol; // A_FirePistol default Doom pistol attack
+            RVLV B 4;
+            RVLV C 4 A_FirePistol;
             RVLV D 4;
-            RVLV E 5 A_ReFire; //loops the sequence if the player was holding down Fire button
+            RVLV E 4 A_ReFire; //loops the sequence if the player was holding down Fire button
             Goto Ready; //otherwise goes back to ready
 
         Flash:
        /* @state Flash
         *       Flash sequence draws a muzzle flash on a separate layer, 
         *       on top of the main weapon sprite                          */
-            RVLV C 7 Bright A_Light1; //illuminates the whole level
+            RVLV C 4 Bright A_Light1; //illuminates the whole level
             Goto LightDone;
 
         Spawn:
